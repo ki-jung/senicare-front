@@ -1,7 +1,7 @@
 /*
 *   Senicare 프로젝트의 공통 CSS
 */
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Moirai+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 @font-face {
     font-family: 'Pretendard';
@@ -11,37 +11,32 @@
 }
 
 :root {
-
-    /* 변수처럼 지정 가능 */
-    --primary-color:rgba(0,192,122,1);
-    --primary-10-color:rgba(0,192,122,0.1);
-    --primary-20-color:rgba(0,192,122,0.2);
-    --error-color:rgba(255, 84, 64, 1);
-    --gray-color:rgba(138, 146, 166, 1);
-    --dark-gray-color:rgba(64, 64, 64, 1);
-    --default-color:rgba(35,45,66,1);
+    --primary-color: rgba(0, 191, 122, 1);
+    --primary-10-color: rgba(0, 191, 122, 0.1);
+    --primary-20-color: rgba(0, 191, 122, 0.2);
+    --error-color: rgba(255, 84, 64, 1);
+    --gray-color: rgba(138, 146, 166, 1);
+    --dark-gray-color: rgba(64, 64, 64, 1);
+    --default-color: rgba(35, 45, 66, 1);
 }
 
-body{
+body {
     margin: 0px;
     font-family: 'Pretendard', sans-serif;
 }
 
-/* 아이디, 비번에 관해 */
 .message.error {
     color: var(--error-color);
 }
 
-/* 인증번호에 관해 */
 .message.primary {
     color: var(--primary-color);
 }
 
-/* 로그인 */
 .button {
     border-radius: 6px;
     padding: 8px 24px;
-    
+
     font-size: 16px;
     font-weight: 400;
     line-height: 175%;
@@ -55,8 +50,13 @@ body{
     cursor: pointer;
 }
 
-.button.primary{
+.button.primary {
     background-color: var(--primary-color);
+}
+
+.button.second {
+    background-color: var(--primary-10-color);
+    color: var(--primary-color);
 }
 
 .button.disable {
@@ -70,27 +70,20 @@ body{
 
 .full-width {
     width: 100%;
-    /* border 박스 기준으로 해야 함 컨텐츠 박스 기준으로 하면 margin때문에 튀어나감 */
     box-sizing: border-box;
 }
 
-.link{
-    /* align-self을 center로 잡으면 해당 글자만 이벤트가 먹음 */
+.link {
     align-self: center;
 
-    /* text-align으로 잡으면 link 박스 전체를 지정하게 됨 */
-    /* text-align: center; */
-    
     font-size: 16px;
     font-weight: 400;
     line-height: 175%;
 
-
     color: rgba(113, 113, 113, 1);
-
 }
 
-.link:hover{
+.link:hover {
     cursor: pointer;
     font-weight: bolder;
 }
@@ -107,11 +100,10 @@ body{
     height: 56px;
 
     background-size: 100% 100%;
-
 }
 
 .sns-button:hover {
-    opacity: 0.6;
+    opacity: 0.8;
     cursor: pointer;
 }
 
@@ -120,12 +112,10 @@ body{
     height: 40px;
 }
 
-/* 클래스 뒤에 띄운뒤 '.'을 찍으면 자손이고 붙여서 '.'을 찍으면 같은 class를 의미함 */
 .sns-button.kakao {
-    /* background-color: yellow; */
     background-image: url(/public/images/kakao-button.png);
 }
+
 .sns-button.naver {
-    /* background-color: green; */
     background-image: url(/public/images/naver-button.png);
 }
