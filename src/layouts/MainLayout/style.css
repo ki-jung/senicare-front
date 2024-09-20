@@ -2,13 +2,8 @@
     display: grid;
     grid-template:
         "logo top" 77px
-        "side main" minmax(944px, auto) / 257px minmax(1182px, 100%);
-
-    /* 드래그 방지 */
-    user-select: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
+        "side main" minmax(944px, auto)
+        / 257px minmax(1182px, 100%);
 }
 
 #layout-logo {
@@ -20,6 +15,12 @@
 
     border-bottom: 1px solid rgba(233, 236, 239, 1);
     border-right: 1px solid rgba(233, 236, 239, 1);
+    
+    /* 드래그 방지 */
+    user-select: none;
+    -webkit-user-select:none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
 #layout-logo .box {
@@ -54,6 +55,8 @@
 
     border-bottom: 1px solid rgba(233, 236, 239, 1);
     padding: 0 24px;
+
+    user-select: none;
 }
 
 #layout-top .path {
@@ -68,11 +71,10 @@
     padding: 16px 12px;
 }
 
-#layout-side-nagivation .navigation {
+#layout-side-navigation .navigation {
     display: flex;
     flex-direction: column;
     gap: 10px;
-
 }
 
 #layout-side-navigation .navigation-item {
@@ -86,6 +88,7 @@
     color: var(--gray-color);
     font-size: 16px;
     font-weight: 400;
+
 }
 
 #layout-side-navigation .navigation-item:hover {
@@ -95,7 +98,7 @@
 
 #layout-side-navigation .navigation-item.active {
     background-color: var(--primary-color);
-
+    
     color: rgba(255, 255, 255, 1);
 }
 
@@ -104,10 +107,6 @@
     height: 24px;
 
     background-size: 100% 100%;
-}
-
-#layout-side-navigation .icon.active {
-    opacity: 0.5;
 }
 
 .cs-icon {
