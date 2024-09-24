@@ -16,7 +16,7 @@ import MM from './views/MM';
 import HR from './views/HR';
 import HRDetail from './views/HR/Detail';
 import { useSearchParams } from 'react-router-dom';
-import { GetSignInRequest } from './apis';
+import { getSignInRequest } from './apis';
 import { access } from 'fs';
 import { ResponseDto } from './apis/dto/response';
 import { GetSignInResponseDto } from './apis/dto/response/nurse';
@@ -111,7 +111,7 @@ export default function Senicare() {
   useEffect(() => {
     const accessToken = cookies[ACCESS_TOKEN];
     if (accessToken) {
-      GetSignInRequest(accessToken).then(getSignInResponse);
+      getSignInRequest(accessToken).then(getSignInResponse);
 
     } else {
       setSignInUser(null);
