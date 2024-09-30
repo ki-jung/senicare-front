@@ -1,9 +1,13 @@
 import Tool from "./tool.interface";
-import SignInUser from "./sign-in-user.interface";
+import Nurse from "./nurse.interface";
 import Customer from "./customer.interface";
+import CareRecord from "./care-record.interface";
+import SignInUser from "./sign-in-user.interface";
 
 export type {
     Tool,
-    SignInUser,
-    Customer
+    Nurse,
+    Customer,
+    CareRecord,
+    SignInUser
 }
