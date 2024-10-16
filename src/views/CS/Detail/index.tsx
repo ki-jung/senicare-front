@@ -17,7 +17,7 @@ import Pagination from 'src/components/pagination';
 export default function CSDetail() {
 
     // state: 고객 번호 경로 변수 상태 //
-    const { customerNumber } = useParams();
+    const { customerNumber } = useParams(); 
 
     // state: 로그인 사용자 상태 //
     const { signInUser } = useSignInUserStore();
